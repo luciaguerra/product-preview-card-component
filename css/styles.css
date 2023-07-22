@@ -19,6 +19,12 @@
 body {
     width: 100%;
     max-height: 100vh;
+    line-height: 1.65;
+    background-color: var(--background-color);
+    color: var(--paragraph-color);
+}
+
+body, button, .original-price {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -31,8 +37,22 @@ main {
     
 }
 
+h1 {
+    line-height: 1;
+    color: var(--font-color);
+    font-size: 2.3rem;
+}
+
 h1, .discount-price {
     font-family: 'Fraunces', serif;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+p, .original-price {
+    font-size: 0.9rem;
 }
 
 img {
@@ -46,7 +66,7 @@ img {
     max-height: 100vh;
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-columns: 15% 35% 35% 15%; 
+    grid-template-columns: 30% 20% 20% 30%; 
     grid-template-areas: 
         ". . . ."
         ". grid-1 grid-2 ."
@@ -58,10 +78,34 @@ img {
     grid-area: grid-1;
 }
 
-.grid-2 {
-    grid-area: grid-2;
-}
-
 .mobile-image {
     display: none;
+}
+
+.grid-2 {
+    grid-area: grid-2;
+    background-color: var(--container-color);
+    padding: 2rem;
+}
+
+.product-type {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.product-name {
+    margin: 1rem 0 1rem;
+}
+
+.price-info {
+    margin: 1.4rem 0;
+}
+
+.original-price {
+    text-decoration-line: line-through;
+    font-weight: 400;
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+    bottom: 0.5rem;
 }
