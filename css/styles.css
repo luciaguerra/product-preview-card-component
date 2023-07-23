@@ -19,22 +19,27 @@
 body {
     width: 100%;
     max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     line-height: 1.65;
     background-color: var(--background-color);
-    color: var(--paragraph-color);
 }
 
 body, button, .original-price {
     font-family: 'Montserrat', sans-serif;
 }
 
+body, .original-price{
+    color: var(--paragraph-color);
+}
+
 main {
     width: 100%;
     min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    
+
 }
 
 h1 {
@@ -63,11 +68,22 @@ img {
 
 button {
     border: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 1.2rem;
+    width: 100%;
+    border-radius: 0.5rem;
+
+}
+
+section {
+    overflow: hidden;
+    border: 1px red solid;
 }
 
 .container {
     width: 100%;
-    max-height: 100vh;
+    max-height: 70vh;
     display: grid; 
     grid-auto-columns: 1fr; 
     grid-template-columns: 30% 20% 20% 30%; 
@@ -112,4 +128,8 @@ button {
     margin: 1rem;
     position: relative;
     bottom: 0.5rem;
+}
+
+.discount-price {
+    color: var(--primary-color);
 }
