@@ -69,15 +69,23 @@ img {
 button {
     border: none;
     color: white;
+    font-weight: 700;
     background-color: var(--primary-color);
     padding: 1.2rem;
     width: 100%;
     border-radius: 0.5rem;
+    cursor: pointer;
+}
 
+button:hover {
+    background-color: #1A4031;
+}
+
+footer, button {
+    text-align: center;
 }
 
 footer {
-    text-align: center;
     margin: 1rem 0;
 
 }
@@ -134,4 +142,20 @@ footer {
 
 .discount-price {
     color: var(--primary-color);
+}
+
+.add-to-cart::before {
+    content: url(../images/icon-cart.svg);
+    margin: 0.7rem;
+    position: relative;
+    top: 0.2rem;
+}
+
+.attribution {
+    line-height: 1.2;
+}
+
+.attribution a {
+    color: var(--font-color);
+    text-decoration: none;
 }
