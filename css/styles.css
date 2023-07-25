@@ -18,12 +18,8 @@
 
 body {
     width: 100%;
-    max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    
     line-height: 1.65;
     background-color: var(--background-color);
 }
@@ -34,6 +30,14 @@ body, button, .original-price {
 
 body, .original-price{
     color: var(--paragraph-color);
+}
+
+body, footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 main {
@@ -75,17 +79,20 @@ button {
 
 }
 
-section {
-    overflow: hidden;
-    border: 1px red solid;
+footer {
+    width: 100%;
+    min-height: 10vh;
+    text-align: center;
+
 }
 
 .container {
-    width: 100vw;
-    max-height: 100vh;
+    min-height: 65vh;
+    overflow: hidden;
+    border: 1px rgba(255, 0, 0, 0) solid;
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-columns: 30vw 20vw 20vw 30vw; 
+    grid-template-columns: auto 20vw 20vw auto; 
     grid-template-areas: 
         ". . . ."
         ". grid-1 grid-2 ."
